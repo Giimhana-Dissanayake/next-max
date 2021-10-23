@@ -14,7 +14,7 @@ function handler(req, res) {
 
     //store that in a db or in a file
 
-    const filePath = path.json(process.cwd(), "data", "feedback.json");
+    const filePath = path.join(process.cwd(), "data", "feedback.json");
     const fileData = fs.readFileSync(filePath);
     const data = JSON.parse(fileData);
     data.push(newFeedback);
